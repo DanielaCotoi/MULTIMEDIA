@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose a movie by a trailer</title>
+    <link rel="stylesheet" href="2_1090_COTOI_CORINA_DANIELA.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="main-title">Choose a movie by a trailer</h1>
+        <div class="container" id="loginContainer">
+            <h2>Autentificare ❤️</h2>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="login()">Autentificare</button>
+            <p class="error" id="errorMessage"></p>
+            <p id="signUpLink" style="display: none;">Nu aveți cont? <a href="#" onclick="showSignUp()">Înregistrați-vă</a></p>
+        </div>
+        <div class="container" id="signUpContainer" style="display: none;">
+            <h2>Creare Cont</h2>
+            <input type="email" id="newEmail" placeholder="Email nou" required>
+            <input type="password" id="newPassword" placeholder="Parolă nouă" required>
+            <button onclick="signUp()">Creează Cont</button>
+            <p class="error" id="signUpMessage"></p>
+        </div>
+    </div>
+
+    <div class="video-container" id="videoContainer" style="display: none;">
+        <h2>TRAILERELE MELE</h2>
+        
+        <div class="video-canvas-container">
+            <div class="video-player">
+                <video id="video1" controls>
+                    <source src="media/LONG STORY SHORT Trailer (2021) Comedy, Romance Movie.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <canvas id="canvas1" width="800" height="450"></canvas>
+            </div>
+            
+            <div class="video-player" >
+                <video id="video2"controls>
+                    <source src="media/REAPPEAR  Award Winning British Short Film  Romantic Adventure.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <canvas id="canvas2" width="800" height="450"></canvas>
+            </div>
+
+            <div class="video-player" >
+                <video id="video3"controls>
+                    <source src="media/REACHER Season 3 - Official Trailer .mp4" Stype="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <canvas id="canvas3" width="800" height="450"></canvas>
+            </div>
+
+            <div class="video-player" >
+                <video id="video4"controls>
+                    <source src="media/FALLEN Trailer Official (2024) Jessica Alexander.mp4" Stype="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <canvas id="canvas4" width="800" height="450"></canvas>
+            </div>
+
+            <div class="video-player" >
+                <video id="video5"controls>
+                    <source src="media/The Amateur _ Official Trailer.mp4" Stype="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <canvas id="canvas5" width="800" height="450"></canvas>
+            </div>        
+        </div>
+        <input type="file" id="addTrailerInput" class="add-trailer-input" accept="video/*">
+        <button id="addTrailerButton" class="add-trailer-button">Adaugă Trailer</button>
+    </div>
+
+
+    <div class="playlist-container" id="playlistContainer" style="display: none;">
+        <h2>Playlist</h2>
+        <ul id="playlist">
+            <li class="playlist-item">
+                Video Title
+                <button>⬆️</button>
+                <button>⬇️</button>
+                <button>❌</button>
+            </li>
+            <li onclick="selectVideo(0)">LONG STORY SHORT Trailer (2021)</li>
+            <li onclick="selectVideo(1)">REAPPEAR - British Short Film</li>
+        </ul>
+    </div>
+    
+    
+    <script src="2_1090_COTOI_CORINA_DANIELA.js"></script>
+</body>
+</html>
